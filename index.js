@@ -21,7 +21,7 @@ async function GetLyric(url) {
 		var html = await request(url)
 		var raw = lpattern.exec(html.body)
 		var res = raw[1].replace(/\<br\>/g," ");
-		res = res.replace(/<i\>(.*)<\/i\>/g, " ");
+        res = res.replace(/<i>\W*(\w+).+(\d+).*<\/i>/g, "\1 \2");
 		res = res.replace(/(?=)(\&quot\;)/g, "\"");
 		res = res.replace(/\<\/div\>/g, " ");
 		console.log(res)
