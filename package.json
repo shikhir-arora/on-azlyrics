@@ -4,7 +4,9 @@
   "description": "Azlyrics terminal using Node.js developed by Chien Tran",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,8 @@
   "homepage": "https://github.com/marxsm/on-azlyrics#readme",
   "dependencies": {
     "async-request": "^1.2.0",
-    "prompt": "^1.0.0"
-  }
+    "prompt": "^1.0.0",
+    "snyk": "^1.88.0"
+  },
+  "snyk": true
 }
